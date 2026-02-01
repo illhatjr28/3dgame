@@ -1,3 +1,8 @@
+A simple platformer that gets the ball ROLLING with basic platforms, followed by rotating platforms, and finished with tilting platforms!! Dont fall off and join the ghosts!!
+
+Character movement speed slowed for maximum challenge and fun!
+
+
 Links to Assets:
 Cannon: https://polyhaven.com/a/cannon_01
 Crepe Satin: https://polyhaven.com/a/crepe_satin
@@ -10,3 +15,5 @@ Animasl https://assetstore.unity.com/packages/3d/characters/animals/quirky-serie
 Ghost https://assetstore.unity.com/packages/3d/characters/creatures/ghost-character-free-267003
 
 <img width="2130" height="837" alt="image" src="https://github.com/user-attachments/assets/04e49485-7b15-41d0-aa1d-463e8324f417" />
+<img width="1929" height="790" alt="image" src="https://github.com/user-attachments/assets/847905c1-e73d-4aa7-9f82-b0afd949e9fd" />
+
