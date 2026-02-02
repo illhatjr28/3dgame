@@ -7,6 +7,7 @@ public class SimpleFirstPersonController : MonoBehaviour
     public float lookSpeedY = 2f; // Mouse Y rotation speed
     public float jumpForce = 5f; // Jump height
     public float gravity = -9.8f; // Gravity force
+    public float groundCheckDistance = 0.4f; // Extra ground check distance
 
     private float rotationX = 0f; // Rotation on the X-axis (up/down)
     private float rotationY = 0f; // Rotation on the Y-axis (left/right)
@@ -15,6 +16,7 @@ public class SimpleFirstPersonController : MonoBehaviour
     private Vector3 moveDirection = Vector3.zero;
     private Vector3 velocity; // This will store the velocity for gravity and jumping
     private Camera camera;
+    private bool isGrounded;
 
     void Start()
     {
@@ -24,8 +26,21 @@ public class SimpleFirstPersonController : MonoBehaviour
         camera = GetComponentInChildren<Camera>();
     }
 
+    public void ResetCamera()
+    {
+        rotationX = 0f;
+        rotationY = 0f;
+    }
+
     void Update()
     {
+        // Better ground check with multiple raycasts for tilted surfaces
+        Vector3 center = transform.position;
+        isGrounded = characterController.isGrounded || 
+                     Physics.Raycast(center, Vector3.down, groundCheckDistance) ||
+                     Physics.Raycast(center + transform.forward * 0.2f, Vector3.down, groundCheckDistance) ||
+                     Physics.Raycast(center - transform.forward * 0.2f, Vector3.down, groundCheckDistance);
+        
         // Mouse Look
         float mouseX = Input.GetAxis("Mouse X") * lookSpeedX;
         float mouseY = Input.GetAxis("Mouse Y") * lookSpeedY;
