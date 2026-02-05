@@ -1,7 +1,3 @@
-Links to Assets:
-Cannon: https://polyhaven.com/a/cannon_01
-Crepe Satin: https://polyhaven.com/a/crepe_satin
-=======
 A simple platformer that gets the ball ROLLING with basic platforms, followed by rotating platforms, and finished with tilting platforms!! Dont fall off and join the ghosts!!
 
 Character movement speed slowed for maximum challenge and fun!
